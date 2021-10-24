@@ -96,37 +96,3 @@ module.exports = {
         }
     },
 };
-
-/*let warnnings = db.get(`warnnings_${message.guild.id}_user_${target.id}`,1)
-
-            if(warnnings === null) {
-                db.set(`warnnings_${message.guild.id}_user_${target.id}`, 1)
-                target.send(`You have been warned in **${message.guild.name}** for **${reason}**`)
-                await message.channel.send(`You warned **${message.mentions.users.first().username}** for **${reason}**`)
-                .then(msg => setTimeout(() => {
-                    msg.delete()
-                }, 10000))
-            } else if(warnnings !== null) {
-                db.add(`warnnings_${message.guild.id}_user_${target.id}`, 1)
-                target.send(`You have been warned in **${message.guild.name}** for **${reason}**`)
-                await message.channel.send(`You warned **${message.mentions.users.first().username}** for **${reason}**`)
-                .then(msg => setTimeout(() => {
-                    msg.delete()
-                }, 10000))
-            }
-
-            if(warnnings >= 4) {
-                target.send(`You have been banned in **${message.guild.name}** for **Accumulations of 5 warnings.**`)
-                await message.channel.send(`**${message.mentions.users.first().username}** was banned for **Accumulations of 5 warnings.**`)
-                .then(msg => setTimeout(() => {
-                    msg.delete()
-                }, 10000))
-                target.ban({reason: 'The member has accumulated 5 warnings.'})
-            } else if(warnnings >= 2) {
-                target.send(`You have been kicked in **${message.guild.name}** for **Accumulations of 4 warnings.**`)
-                await message.channel.send(`**${message.mentions.users.first().username}** was kicked for **Accumulations of 4 warnings.**`)
-                .then(msg => setTimeout(() => {
-                    msg.delete()
-                }, 10000))
-                target.kick()
-            }*/
