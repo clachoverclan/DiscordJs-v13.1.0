@@ -22,7 +22,8 @@ module.exports = {
         if(!target) return message.reply('💥 **Please mention a member!**')
         if(target.roles.highest.position >= message.member.roles.highest.position) return message.reply('💥 **You cannot unmute this user!**')
 
-        target.roles.remove(muterole)
+        target.roles.remove(muterole).catch(err => console.log())
+        
         let embed = new MessageEmbed()
         .setColor('ORANGE')
         .setDescription(`
